@@ -25,7 +25,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _messageBubbleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        
+        _messageBubbleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];//[UIFont fontWithName:@"FiraSans-Light" size:14.0]; //
         _messageBubbleContainerViewWidth = 320.0f;
     }
     return self;

@@ -166,6 +166,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
     self.avatarImageView.image = nil;
     self.avatarImageView.highlightedImage = nil;
+    self.textView.textColor = [UIColor darkGrayColor];
 }
 
 - (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
@@ -376,7 +377,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
         [self.delegate messagesCollectionViewCellDidTapMessageBubble:self];
     }
     else {
-        [self.delegate messagesCollectionViewCellDidTapCell:self atPosition:touchPt];
+//        [self.delegate messagesCollectionViewCellDidTapCell:self atPosition:touchPt];
     }
 }
 

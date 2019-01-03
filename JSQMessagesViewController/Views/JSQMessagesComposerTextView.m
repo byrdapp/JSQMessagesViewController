@@ -25,24 +25,22 @@
 
 @implementation JSQMessagesComposerTextView
 
-@synthesize pasteDelegate;
-
 #pragma mark - Initialization
 
 - (void)jsq_configureTextView
 {
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    CGFloat cornerRadius = 6.0f;
+    CGFloat cornerRadius = 0.0f;
 
     self.backgroundColor = [UIColor whiteColor];
-    self.layer.borderWidth = 0.5f;
+    self.layer.borderWidth = 0.0f;
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.layer.cornerRadius = cornerRadius;
 
     self.scrollIndicatorInsets = UIEdgeInsetsMake(cornerRadius, 0.0f, cornerRadius, 0.0f);
 
-    self.textContainerInset = UIEdgeInsetsMake(4.0f, 2.0f, 4.0f, 2.0f);
+    self.textContainerInset = UIEdgeInsetsMake(14.0f, 2.0f, 4.0f, 2.0f);
     self.contentInset = UIEdgeInsetsMake(1.0f, 0.0f, 1.0f, 0.0f);
 
     self.scrollEnabled = YES;
@@ -158,7 +156,7 @@
     if ([self.text length] == 0 && self.placeHolder) {
         [self.placeHolderTextColor set];
 
-        [self.placeHolder drawInRect:CGRectInset(rect, 7.0f, 5.0f)
+        [self.placeHolder drawInRect:CGRectInset(rect, 7.0f, 14.0f)
                       withAttributes:[self jsq_placeholderTextAttributes]];
     }
 }

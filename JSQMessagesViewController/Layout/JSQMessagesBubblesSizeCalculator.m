@@ -168,7 +168,7 @@
     }
 
     // also need to add `self.additionalInset` here, see comment above
-    NSInteger horizontalInsets = layout.sectionInset.left + layout.sectionInset.right + self.additionalInset;
+    NSInteger horizontalInsets = self.additionalInset;//layout.sectionInset.left + layout.sectionInset.right + self.additionalInset;
     CGFloat width = CGRectGetWidth(layout.collectionView.bounds) - horizontalInsets;
     CGFloat height = CGRectGetHeight(layout.collectionView.bounds) - horizontalInsets;
     self.layoutWidthForFixedWidthBubbles = MIN(width, height);

@@ -58,7 +58,7 @@
  *  @see `messagesCollectionViewCellDidTapAvatar:`
  *  @see `messagesCollectionViewCellDidTapMessageBubble:`
  */
-- (void)messagesCollectionViewCellDidTapCell:(JSQMessagesCollectionViewCell *)cell atPosition:(CGPoint)position;
+//- (void)messagesCollectionViewCellDidTapCell:(JSQMessagesCollectionViewCell *)cell atPosition:(CGPoint)position;
 
 /**
  *  Tells the delegate that an actions has been selected from the menu of this cell.

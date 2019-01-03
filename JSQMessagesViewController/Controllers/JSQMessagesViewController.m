@@ -1054,8 +1054,14 @@ JSQMessagesKeyboardControllerDelegate>
 
 - (void)jsq_updateCollectionViewInsets
 {
+    double heightToAdd = 00;
+    if (self.inputToolbar.contentView.textView.isFirstResponder == false) {
+        heightToAdd = 20;
+    }else{
+        heightToAdd = 00;
+    }
     [self jsq_setCollectionViewInsetsTopValue:self.topLayoutGuide.length + self.topContentAdditionalInset
-                                  bottomValue:CGRectGetMaxY(self.collectionView.frame) - CGRectGetMinY(self.inputToolbar.frame)];
+                                  bottomValue:CGRectGetMaxY(self.collectionView.frame) - CGRectGetMinY(self.inputToolbar.frame) + heightToAdd];
 }
 
 - (void)jsq_setCollectionViewInsetsTopValue:(CGFloat)top bottomValue:(CGFloat)bottom

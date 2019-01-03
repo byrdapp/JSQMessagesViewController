@@ -105,9 +105,13 @@
         return nil;
     }
     
-    [self.dateFormatter setDateStyle:NSDateFormatterNoStyle];
+//    [self.dateFormatter setDateStyle:NSDateFormatterNoStyle];
     [self.dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    return [self.dateFormatter stringFromDate:date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"];
+    [dateFormat setLocale:locale];
+    [dateFormat setDateFormat:@"HH:mm"];
+    return [dateFormat stringFromDate:date];
 }
 
 - (NSString *)relativeDateForDate:(NSDate *)date
